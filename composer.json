@@ -1,6 +1,6 @@
 {
     "name": "applifaction/dpd-php-api",
-    "version": "v1.0.2",
+    "version": "1.0.2",
     "type": "library",
     "description": "PHP wrapper for DPD Germany SOAP API",
     "require": {
