@@ -1,5 +1,6 @@
 {
-    "name": "blobswop/dpd-php-api",
+    "name": "applifaction/dpd-php-api",
+    "version": "v1.0.2",
     "type": "library",
     "description": "PHP wrapper for DPD Germany SOAP API",
     "require": {
@@ -16,8 +17,8 @@
     ],
     "authors": [
         {
-            "name": "Sergei Deriabin",
-            "email": "deryabinsergey@gmail.com"
+            "name": "Oliver Ernst",
+            "email": "oliver@applifaction.com"
         }
     ],
     "license": "MIT",
