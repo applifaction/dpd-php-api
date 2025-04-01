@@ -11,7 +11,7 @@ class GeneralShipmentData
     const PRODUCT_E10 = 'E10'; // DPD 10:00
     const PRODUCT_E12 = 'E12'; // DPD 12:00
     const PRODUCT_E18 = 'E18'; // DPD 18:00
-    const PRODUCT_IE2 = 'IE2'; // DPD EXPRESS
+    const PRODUCT_IE2 = 'IE2'; // DPD EXPRESS (Airfreight)
     const PRODUCT_MAIL = 'MAIL'; // DPD International Mail
     const PRODUCT_MAX = 'MAX'; // DPD MAX
     const PRODUCT_PL = 'PL'; // DPD PARCELLetter
@@ -107,14 +107,14 @@ class GeneralShipmentData
      * Default value is false.
      * @var bool
      */
-    protected bool $mpsCompleteDelivery = false;
+    protected bool $mpsCompleteDelivery;
 
     /**
      * Specifies if the label for complete delivery is printed for pickup.
      * Default value is false.
      * @var bool
      */
-    protected bool $mpsCompleteDeliveryLabel = false;
+    protected bool $mpsCompleteDeliveryLabel;
 
     /**
      * Volume per consignment in cm3 (without positions after the decimal point).

@@ -27,14 +27,14 @@ class ProductAndServiceData
      * Default value is false
      * @var bool
      */
-    protected bool $saturdayDelivery = false;
+    protected bool $saturdayDelivery;
 
     /**
      * Specifies if the recipient has to pay the consignment.
      * Default value is false.
      * @var bool
      */
-    protected bool $exWorksDelivery = false;
+    protected bool $exWorksDelivery;
 
     /**
      * Set to true if an international shipment should use Guarantee,

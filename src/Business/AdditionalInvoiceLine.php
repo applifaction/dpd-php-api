@@ -53,9 +53,9 @@ class AdditionalInvoiceLine
 
     /**
      * Country of invoice origin (ISO 3166).
-     * @var int
+     * @var string
      */
-    protected int $customsOrigin;
+    protected string $customsOrigin;
 
     /**
      * Parcel net weight in gramm rounded in 10 gramm units without decimal delimiter (e.g. 300 equals 3kg).
@@ -213,19 +213,19 @@ class AdditionalInvoiceLine
     }
 
     /**
-     * @return int|null
+     * @return string|null
      */
-    public function getCustomsOrigin(): ?int
+    public function getCustomsOrigin(): ?string
     {
         return $this->customsOrigin ?? null;
     }
 
     /**
-     * @param int $customsOrigin
+     * @param string $customsOrigin
      * @return static
      * @throws WrongArgumentException
      */
-    public function setCustomsOrigin(int $customsOrigin): static
+    public function setCustomsOrigin(string $customsOrigin): static
     {
         if ($customsOrigin > self::MAX_CUSTOMS_ORIGIN) {
             throw new WrongArgumentException(

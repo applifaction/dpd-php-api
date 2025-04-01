@@ -93,7 +93,7 @@ class Pickup
      * Mandatory for consignment.
      * @var Address
      */
-    protected Address $address;
+    protected Address $collectionRequestAddress;
 
     /**
      * @return int|null
@@ -369,18 +369,18 @@ class Pickup
     /**
      * @return Address|null
      */
-    public function getAddress(): ?Address
+    public function getCollectionRequestAddress(): ?Address
     {
-        return $this->address ?? null;
+        return $this->collectionRequestAddress ?? null;
     }
 
     /**
-     * @param Address $address
+     * @param Address $collectionRequestAddress
      * @return static
      */
-    public function setAddress(Address $address): static
+    public function setCollectionRequestAddress(Address $collectionRequestAddress): static
     {
-        $this->address = $address;
+        $this->collectionRequestAddress = $collectionRequestAddress;
         return $this;
     }
 

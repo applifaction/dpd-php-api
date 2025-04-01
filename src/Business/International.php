@@ -45,7 +45,7 @@ class International
 
     const PATTERN_CUSTOMS_CURRENCY = '/^[A-Z]{3}$/u';
     const PATTERN_CUSTOMS_CURRENCY_EXPORT = '/^[A-Z]{3}$/u';
-    const PATTERN_CUSTOMS_ORIGIN = '/^[A-Z]$/u';
+    const PATTERN_CUSTOMS_ORIGIN = '/^[A-Z]{2}$/u';
     const PATTERN_COMMERCIAL_INVOICE_CONSIGNOR_VAT_NUMBER = '/^[A-Z]{2}\w{1,15}$/u';
 
     /**

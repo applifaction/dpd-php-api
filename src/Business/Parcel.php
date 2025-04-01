@@ -97,7 +97,7 @@ class Parcel
      * Default value is false.
      * @var bool
      */
-    protected bool $hazardousLimitedQuantities = false;
+    protected bool $hazardousLimitedQuantities;
 
     /**
      * Specifies if this parcel has increased insurance value. Default value is false.
@@ -131,7 +131,7 @@ class Parcel
      * Message number for consignment shipper information. Default value is 1.
      * @var int
      */
-    protected int $messageNumber = 1;
+    protected int $messageNumber;
 
     /**
      * Blockable functions. Possible values are:
@@ -162,7 +162,7 @@ class Parcel
      * Default value is false.
      * @var bool
      */
-    protected bool $printInfo1OnParcelLabel = false;
+    protected bool $printInfo1OnParcelLabel;
 
     /**
      * Information text 1.
@@ -182,7 +182,7 @@ class Parcel
      * Default value is false.
      * @var bool
      */
-    protected bool $returns = false;
+    protected bool $returns;
 
     /**
      * Parcel class.

@@ -22,13 +22,13 @@ class ShipmentResponse
      * Contains information about the single parcels.
      * @var ParcelInformationType
      */
-    protected ParcelInformationType $parcelInformation;
+    protected $parcelInformation;
 
     /**
      * Contains information about errors during shipment order processing.
-     * @var FaultCodeType
+     * @var FaultCodeType|FaultCodeType[]
      */
-    protected FaultCodeType $faults;
+    protected $faults;
 
     /**
      * @return string|null
@@ -47,19 +47,22 @@ class ShipmentResponse
     }
 
     /**
-     * @return ParcelInformationType|null
+     * @return ParcelInformationType[]|ParcelInformationType|null
      */
-    public function getParcelInformation(): ?ParcelInformationType
+    public function getParcelInformation()
     {
         return $this->parcelInformation ?? null;
     }
 
     /**
-     * @return FaultCodeType|null
+     * @return FaultCodeType[]
      */
-    public function getFaults(): ?FaultCodeType
+    public function getFaults(): array
     {
-        return $this->faults ?? null;
+        if (is_null($this->faults)) return [];
+        if ($this->faults instanceof FaultCodeType) return [$this->faults];
+        if (is_array($this->faults)) return $this->faults;
+        return [];
     }
 
     /**
@@ -67,7 +70,6 @@ class ShipmentResponse
      */
     public function isError(): bool
     {
-        return
-            $this->getFaults() instanceof FaultCodeType;
+        return $this->getFaults() instanceof FaultCodeType || is_array($this->getFaults());
     }
 }
